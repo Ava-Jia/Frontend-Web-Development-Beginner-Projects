@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2916eaac23.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="budget-box">
+            <form id="budget-form">
+                <h3>Budget</h3>
+                <p class="hide-error" id="budget-error">Value cannot be empty or negetive.</p>
+                <input type="number" id="budget-amount" placeholder="Enter your budget">
+                <button type="submit" id="budget-submit">Set budget</button>
+            </form>
+        </div>
+        <div class="card" id="expenses-box">
+            <form id="expense-form">
+                <h3>Expenses</h3>
+                <p class="hide-error" id="expenses-error">Value cannot be empty or negetive.</p>
+                <input type="text" id="expenses-category" placeholder="Enter category of expenses">
+                <input type="number" id="expenses-amount" placeholder="Enter cost of expenses">
+                <button type="submit" id="expenses-submit">Set expenses</button>
+            </form>
+        </div>
+        <div class="card" id="budget-expenses-balance">
+            <div id="total-budget-bar" class="bar-grid">
+                <h4>Total Budget</h4>
+                <p id="total-budget"></p>
+            </div>
+            <div id="total-expenses-bar" class="bar-grid">
+                <h4>Total Expenses</h4>
+                <p id="total-expenses"></p>
+            </div>
+            <div id="balance-bar" class="bar-grid">
+                <h4>Balance</h4>
+                <p id="balance"></p>
+            </div>
+        </div>
+        <div class="card" id="expense-list">
+            <h3>Expense List</h3>
+            <div class="expenses-container">
+                <ul id="expense-list-items">
+                    <!-- <li class="expense-item">
+                        <span id="expense-item-name">Food</span>
+                        <span id="expense-item-amount">1000</span>
+                        <button class="edit-btn" style="width: 30px;"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="delete-btn" style="width: 30px;"><i class="fa-solid fa-trash"></i></button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

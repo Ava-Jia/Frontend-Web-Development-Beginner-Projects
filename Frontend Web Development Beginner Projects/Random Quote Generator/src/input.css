@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+    font-family: Poppins, system-ui, sans-serif;
+    }
+    
+    /* 添加特定的标题样式 */
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yuji Mai', serif;
+    }
+  }

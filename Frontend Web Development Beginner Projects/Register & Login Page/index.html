@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="min-h-screen flex items-center justify-center bg-[url('../landscape-sea.jpg')] bg-cover">
+<div class="relative container mx-20 max-w-2xl h-[600px] bg-white rounded-lg shadow-md border-2 flex flex-col items-center space-y-16 p-8 my-8 overflow-hidden">
+    <div id="switch" class="relative bg-gray-400 rounded-full p-1 h-12 flex items-center mb-56">
+        <button id="switch-btn" class="absolute top-0 left-0 rounded-full bg-blue-500 w-48 h-12 z-0 transition-all duration-300"></button>
+        <button class=" w-40 z-10 bg-transparent text-white" id="switch-register" onclick="Register()">Register</button>
+        <button class=" w-40 z-10 bg-transparent text-white" id="switch-login" onclick="Login()">Login</button>
+    </div>
+    
+    <div id="register-card" class="absolute w-full max-w-md p-12 h-96  transition-all duration-500">
+        <form id="register-form" class="flex flex-col gap-y-6">
+            <div class="flex flex-col space-y-2">
+                <label for="name-register" class="text-sm font-medium text-neutral-500 capitalize">name</label>
+                <input class="px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="text" name="name-register" id="name-register" placeholder="Enter your name">
+            </div>
+            
+            <div class="flex flex-col space-y-2">
+                <label for="email-register" class="text-sm font-medium text-neutral-500 capitalize">email</label>
+                <input class="px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="email" name="email-register" id="email-register" placeholder="Enter your email">
+            </div>
+            
+            <div class="flex flex-col space-y-2">
+                <label for="password-register" class="text-sm font-medium text-neutral-500 capitalize">password</label>
+                <input class="px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="password" name="password-register" id="password-register" placeholder="Enter your password">
+            </div>
+            
+            <button class="px-4 border-2 border-grey-100 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 cursor-pointer transition-colors focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="submit">Register</button>
+        </form>
+    </div>
+    
+    <div id="login-card" class="absolute left-[700px] w-full max-w-md p-12 h-96  transition-all duration-500">
+        <form id="login-form" class="flex flex-col space-y-6">
+            <div class="flex flex-col space-y-2">
+                <label for="email-login" class="text-sm font-medium text-neutral-500 capitalize">email</label>
+                <input class="px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="email" name="email-login" id="email-login" placeholder="Enter your email">
+            </div>
+            
+            <div class="flex flex-col space-y-2">
+                <label for="password-login" class="text-sm font-medium text-neutral-500 capitalize">password</label>
+                <input class="px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="password" name="password-login" id="password-login" placeholder="Enter your password">
+            </div>
+            
+            <button class="px-4 border-2 border-grey-100 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 cursor-pointer transition-colors focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+    <script>
+        const x = document.getElementById('switch-btn')
+        const y = document.getElementById('register-card')
+        const z = document.getElementById('login-card')
+
+        function Register(){
+            x.style.left = '0px'
+            y.style.left = '125px'
+            z.style.left = '700px'
+        }
+
+        function Login(){
+            x.style.left = '140px'
+            y.style.left = '-700px'
+            z.style.left = '125px'
+        }
+    </script>
+</body>
+</html>
